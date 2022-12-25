@@ -4,9 +4,11 @@ public class StepTracker {
     Scanner scanner;
     MonthData[] monthData;  // создали поле с массивом
     int goalByStepsPerDay = 10000;
+    Converter localConverter;
 
 
     StepTracker(Scanner scan) { // конструктор с аргументом поле класса
+        localConverter = new Converter();
         scanner = scan;
         monthData = new MonthData[12];
         for (int i = 0; i < 12; i++) {
